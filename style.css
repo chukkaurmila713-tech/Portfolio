@@ -1,0 +1,172 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    /* Rich charcoal-green text to keep contrast high and accessible */
+    color: #1e2d26;       
+    background-color: #dce5e0; 
+}
+
+/* ==========================================================================
+   2. HERO SECTION (Deep, Premium Forest Green)
+   ========================================================================== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0a1f1a, #12332a); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #e6f2ee;      /* Fresh mint-tinted heading text */
+    letter-spacing: -0.5px;
+}
+
+.hero p {
+    margin: 20px 0 35px 0;
+    font-size: 1.25rem;
+    color: #a3be8c;      /* Soft moss green text */
+}
+
+/* ==========================================================================
+   3. CALL TO ACTION BUTTON (Vibrant Neon Mint Accent)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    background: #05ffd1; 
+    color: #0a1f1a;      /* Dark green text on the bright button for crisp readability */
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(5, 255, 209, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(5, 255, 209, 0.45);
+}
+
+/* ==========================================================================
+   4. GLOBAL SECTIONS (Custom Colored Backgrounds)
+   ========================================================================== */
+section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 45px;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0a1f1a; 
+}
+
+/* CUSTOM SECTION BACKGROUNDS:
+   We alternate between soft, warm sage-cream tones and muted earth-greens 
+   to guide the user's eye naturally down the page without using pure white or black.
+*/
+#about {
+    background-color: #e3eae6; /* Smooth, soft pale sage-cream */
+}
+
+#projects {
+    background-color: #cbd7d0; /* A deeper, richer, elegant mist-green */
+}
+
+#contact {
+    background-color: #dce5e0; /* A comforting mid-tone sage to bring it all together */
+}
+
+/* ==========================================================================
+   5. PROJECTS GRID & CARDS
+   ========================================================================== */
+.project-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    /* Cards use an ultra-light mint-tinted cream to pop off the mist-green section background */
+    background: #f4f7f5; 
+    padding: 35px 30px;
+    border-radius: 16px;
+    width: 320px;
+    /* Soft forest-green tinted shadow instead of standard black/gray shadow */
+    box-shadow: 0 10px 30px rgba(10, 31, 26, 0.06); 
+    border: 1px solid rgba(10, 31, 26, 0.03);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(5, 255, 209, 0.2);
+    border-color: rgba(5, 255, 209, 0.5); /* Glows beautifully with the neon mint theme */
+}
+
+.project-card i {
+    font-size: 45px;
+    color: #12332a;      /* Forest green accent color for your icons */
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   6. CONTACT & FOOTER
+   ========================================================================== */
+#contact p {
+    margin: 15px 0;
+    font-size: 1.15rem;
+    color: #2c3e35;
+}
+
+footer {
+    background: #0a1f1a; /* Reuses the stunning deep pine from the hero section */
+    color: #728c81;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (Mobile Optimization)
+   ========================================================================== */
+@media (max-width: 768px) {
+    section {
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
