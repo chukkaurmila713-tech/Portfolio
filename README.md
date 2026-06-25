@@ -12,3 +12,13 @@ A containerized static personal portofolio website deployed on an **AWS EC2(Ubun
 * Cloned the repo on the server and built the Docker image:bash
   sudo docker build -t portfolio-web
 sudo docker run -d -p 80:80 --name my-portfolio portfolio-web
+
+
+### Task 3: CI/CD Automation Pipeline 
+An automated Continuous Integratin(CI) pipeline has been implemented using **GitHub Actions**.
+
+### How it works:
+- **Trigger:** Every time code changes are committed and pushed to the 'main' branch,the workflow automatically runs.
+- **Environment:** The pipeline spins up an isolated 'ubuntu-latest' virtual runner.
+- **Authencation:** It securely logs into Docker Hub using a Personal Access Token stored in GitHub Secrets.'DOCKER_PASSWORD'.
+- **Build & Deliver:** It builds the updated Docker container image from the project's local 'Dockerfile' and automatically pushes the tagged image 'latest' straight to my public Docker Hub repository.
