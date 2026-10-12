@@ -1,98 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cloud & DevOps Internship Project - Team Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm Chukka Urmila</h1>
-            <p>Cloud Computing & DevOps Enthusiast</p>
-            <a href="#projects" class="btn">View Projects</a>
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="brand"><i class="fa-solid fa-cloud"></i> Cloud &amp; DevOps Team</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#monitoring">Monitoring</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>We build and deploy cloud applications.</h1>
+    <p>Our Cloud &amp; DevOps internship project. We use AWS, Docker and GitHub Actions to ship websites automatically.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#projects">View our projects</a>
+      <a class="btn btn-ghost" href="#monitoring">See live monitoring</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="assets/avatar.svg" alt="Team picture" class="avatar" />
+    <div>
+      <h2>About us</h2>
+      <p>We completed an internship at Maincrafts Technology in Cloud Computing and DevOps.
+         We learned to host websites on AWS, package apps with Docker, and automate
+         builds and deployments with CI/CD pipelines.</p>
+      <p class="skills">
+        <span><i class="fa-brands fa-aws"></i> AWS</span>
+        <span><i class="fa-brands fa-docker"></i> Docker</span>
+        <span><i class="fa-brands fa-github"></i> GitHub Actions</span>
+        <span><i class="fa-brands fa-linux"></i> Linux</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team">
+    <h2 class="section-title">Our team</h2>
+    <div class="cards team">
+
+      <article class="card member">
+        <i class="fa-solid fa-user-circle"></i>
+        <h3>Chukka Urmila</h3>
+        <p class="tech">Cloud &amp; DevOps Intern</p>
+      </article>
+
+      <article class="card member">
+        <i class="fa-solid fa-user-circle"></i>
+        <h3>Ganagalla Deekshitha</h3>
+        <p class="tech">Cloud &amp; DevOps Intern</p>
+      </article>
+
+      <article class="card member">
+        <i class="fa-solid fa-user-circle"></i>
+        <h3>Lopinti Hephzibah Sharon Lilli</h3>
+        <p class="tech">Cloud &amp; DevOps Intern</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Pipeline -->
+  <section id="pipeline" class="wrap">
+    <h2 class="section-title">How our code reaches the cloud</h2>
+    <p class="lead">Every git push is tested, built, shipped and deployed automatically.</p>
+    <ol class="steps">
+      <li><a href="https://github.com/chukkaurmila713-tech/Portfolio" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><b>Push code</b><span>GitHub repository</span></a></li>
+      <li><a href="https://github.com/chukkaurmila713-tech/Portfolio/actions" target="_blank" rel="noopener"><i class="fa-solid fa-vial-circle-check"></i><b>Test</b><span>GitHub Actions runs</span></a></li>
+      <li><a href="https://github.com/chukkaurmila713-tech/Portfolio/blob/main/Dockerfile" target="_blank" rel="noopener"><i class="fa-brands fa-docker"></i><b>Build image</b><span>View the Dockerfile</span></a></li>
+      <li><a href="https://hub.docker.com/r/Chukkaurmila713-tech/portfolio-website" target="_blank" rel="noopener"><i class="fa-solid fa-box-archive"></i><b>Store image</b><span>Docker Hub page</span></a></li>
+      <li><a href="http://EC2-PUBLIC-IP" target="_blank" rel="noopener"><i class="fa-solid fa-server"></i><b>Deploy</b><span>Open live server</span></a></li>
+    </ol>
+    <p class="hint">Click any step to open it.</p>
+    <p class="badges">
+      <span class="pill ok"><i class="fa-solid fa-check"></i> Build passing</span>
+      <span class="pill info">Last deploy 2 min ago</span>
+      <span class="pill info"><i class="fa-solid fa-lock"></i> HTTPS enabled</span>
+    </p>
+  </section>
+
+  <!-- Monitoring -->
+  <section id="monitoring" class="wrap">
+    <h2 class="section-title">Live server monitoring</h2>
+    <p class="lead">Our EC2 server is watched by Grafana, Prometheus and cAdvisor. Sample values are shown here.</p>
+    <div class="stats">
+      <div class="stat"><span>CPU usage</span><b>23%</b></div>
+      <div class="stat"><span>Memory</span><b>41%</b></div>
+      <div class="stat"><span>Containers</span><b>4 up</b></div>
+      <div class="stat"><span>Uptime</span><b>99.9%</b></div>
+    </div>
+    <div class="panels">
+      <div class="panel">
+        <h3>CPU over the last hour</h3>
+        <svg viewBox="0 0 320 100" role="img" aria-label="CPU usage line chart">
+          <line x1="0" y1="25" x2="320" y2="25" class="grid"/>
+          <line x1="0" y1="50" x2="320" y2="50" class="grid"/>
+          <line x1="0" y1="75" x2="320" y2="75" class="grid"/>
+          <polyline class="line" points="0,78 20,74 40,80 60,70 80,72 100,60 120,66 140,48 160,40 180,58 200,64 220,52 240,60 260,68 280,62 300,66 320,64"/>
+        </svg>
+      </div>
+      <div class="panel">
+        <h3>Memory by container</h3>
+        <div class="bars">
+          <span>mysql</span><i><u style="width:78%"></u></i><em>310 MB</em>
+          <span>app</span><i><u style="width:30%"></u></i><em>120 MB</em>
+          <span>grafana</span><i><u style="width:24%"></u></i><em>95 MB</em>
+          <span>nginx</span><i><u style="width:4%"></u></i><em>8 MB</em>
         </div>
-    </header>
+      </div>
+    </div>
+    <p class="center"><a class="btn btn-dark" href="http://EC2-PUBLIC-IP:3000">Open live Grafana dashboard</a></p>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am passionate about Cloud Computing, AWS, DevOps, and Web Development.
-            I enjoy building scalable and user-friendly applications.
-            By blending development skills with cloud architecture ,I design systems optimized for speed and reliability.
-            <br><br>
-            <strong>Key Highlights:</strong>
-            <br>
-            <strong>Web Dev & DevOps:</strong>
-            Passionate about combining clean frontend engineering with automated deployment workflow.
-            <br>
-            <strong>Cloud Architecture:</strong>
-            Hands-on experience designing cloud-native solutions,including hosting secure,high performance static websites using AWS S3 and CloudFront.
-            </p>
-    </section>
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="cards">
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
+      <article class="card">
+        <h3><i class="fa-solid fa-globe"></i> Static site on S3 + CloudFront</h3>
+        <p>We hosted this portfolio in an S3 bucket and served it over HTTPS through CloudFront.</p>
+        <p class="tech">AWS S3, CloudFront, bucket policy</p>
+      </article>
 
-        <div class="project-container">
+      <article class="card">
+        <h3><i class="fa-brands fa-docker"></i> Docker + CI pipeline</h3>
+        <p>We packaged the site in an Nginx container. GitHub Actions builds the image and pushes it to Docker Hub on every commit.</p>
+        <p class="tech">Docker, Nginx, GitHub Actions, Docker Hub</p>
+      </article>
 
-            <div class="project-card">
-                <i class="fas fa-cloud"></i>
-                <h3>AWS Portfolio Hosting</h3>
-                <p>Hosted a static website using AWS S3 and CloudFront.
-                    AWS Portfolio Hosting is the process of deploying and hosting a personal or professional portfolio website using services provided by Amazon Web Services (AWS). 
-                    This makes it an excellent project for students, developers, and cloud professionals looking to showcase their technical expertise.
-                </p>
-            </div>
+      <article class="card">
+        <h3><i class="fa-solid fa-rocket"></i> Automated deployment on EC2</h3>
+        <p>Our pipeline connects to an EC2 server over SSH and runs the new container. Nginx works as a reverse proxy on port 80.</p>
+        <p class="tech">AWS EC2, SSH, Nginx reverse proxy</p>
+      </article>
 
-            <div class="project-card">
-                <i class="fas fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Designed responsive websites using HTML, CSS, and JavaScript.</p>
-            </div>
+          <article class="card">
+        <h3><i class="fa-solid fa-chart-line"></i> Live monitoring with Grafana</h3>
+        <p>We added Prometheus, Node Exporter and cAdvisor so the server's CPU, memory and containers can be watched live.</p>
+        <p class="tech">Grafana, Prometheus, Docker Compose</p>
+      </article>
 
-            <div class="project-card">
-                <i class="fas fa-server"></i>
-                <h3>DevOps Project</h3>
-                <p>Implemented CI/CD workflows and cloud deployment.</p>
-            </div>
+    </div>
+  </section>
 
-        </div>
-    </section>
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <p>Contact us: <a href="mailto:you@example.com">chukkaurmila713@gmail.com</a></p>
+    <p class="social">
+      <a href="https://github.com/yourusername" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/Chukka Urmila" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </p>
+    <p class="copy">&copy; 2026 Your Name, Ganagalla Deekshitha &amp; Lopinti Hephzibah Sharon Lilli</p>
+  </footer>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> 
-            chukkaurmila@example.com
-        </p>
-        <p><i class="fas-brands  fa-github"></i>
-            github.com/urmilachukka11-make
-            <link href="https://github.com/chukkaurmila713-tech/static-web">
-        </p>
-        <p>
-            <i class = "fa-brands fa-linkedin"> </i>
-            linkedin.com/in/urmilachukka11
-        </p>
-       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Chukka Urmila. All Rights Reserved.</p>
-    </footer>
-
+</body>
+</html>
