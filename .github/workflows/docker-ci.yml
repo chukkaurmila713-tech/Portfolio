@@ -19,3 +19,19 @@ jobs:
       - run: docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest .
 
       - run: docker push ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest
+
+  deploy:
+    needs: docker-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest
+            docker stop my-portfolio || true
+            docker rm my-portfolio || true
+            docker run -d --name my-portfolio --restart unless-stopped -p 80:80 ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest
