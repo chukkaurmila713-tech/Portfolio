@@ -66,4 +66,127 @@
         <p class="tech">Cloud &amp; DevOps Intern</p>
         <p class="social">
           <a href="https://github.com/chukkaurmila713-tech" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a
+          <a href="https://www.linkedin.com/in/chukka-urmila" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </p>
+      </article>
+
+      <article class="card member">
+        <i class="fa-solid fa-user-circle"></i>
+        <h3>Ganagalla Deekshitha</h3>
+        <p class="tech">Cloud &amp; DevOps Intern</p>
+        <p class="social">
+          <a href="https://github.com/ganagalladeekshitha35/Deekshitha-portfolio" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <!-- Add Deekshitha's LinkedIn here when you have it:
+          <a href="https://www.linkedin.com/in/HER-REAL-NAME" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          -->
+        </p>
+      </article>
+
+      <article class="card member">
+        <i class="fa-solid fa-user-circle"></i>
+        <h3>Lopinti Hephzibah Sharon Lilli</h3>
+        <p class="tech">Cloud &amp; DevOps Intern</p>
+        <p class="social">
+          <a href="https://github.com/sharonlilly05" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/lopinti-hephzibah-sharon-lilli" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Pipeline -->
+  <section id="pipeline" class="wrap">
+    <h2 class="section-title">How our code reaches the cloud</h2>
+    <p class="lead">Every git push is tested, built, shipped and deployed automatically.</p>
+    <ol class="steps">
+      <li><a href="https://github.com/chukkaurmila713-tech/Portfolio" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><b>Push code</b><span>GitHub repository</span></a></li>
+      <li><a href="https://github.com/chukkaurmila713-tech/Portfolio/actions" target="_blank" rel="noopener"><i class="fa-solid fa-vial-circle-check"></i><b>Test</b><span>GitHub Actions runs</span></a></li>
+      <li><a href="https://github.com/chukkaurmila713-tech/Portfolio/blob/main/Dockerfile" target="_blank" rel="noopener"><i class="fa-brands fa-docker"></i><b>Build image</b><span>View the Dockerfile</span></a></li>
+      <li><a href="https://hub.docker.com/r/chukkaurmila11/portfolio-website" target="_blank" rel="noopener"><i class="fa-solid fa-box-archive"></i><b>Store image</b><span>Docker Hub page</span></a></li>
+      <li><a href="http://13.236.207.176" target="_blank" rel="noopener"><i class="fa-solid fa-server"></i><b>Deploy</b><span>Open live server</span></a></li>
+    </ol>
+    <p class="hint">Click any step to open it.</p>
+    <p class="badges">
+      <img src="https://github.com/chukkaurmila713-tech/Portfolio/actions/workflows/docker-ci.yml/badge.svg" alt="Build status" />
+      <span class="pill info">Auto-deploy on every push</span>
+      <span class="pill info"><i class="fa-brands fa-docker"></i> Running in Docker on EC2</span>
+    </p>
+  </section>
+
+  <!-- Monitoring -->
+  <section id="monitoring" class="wrap">
+    <h2 class="section-title">Pipeline and server monitoring</h2>
+    <p class="lead">Our pipeline and server status. The CPU and memory values below are sample values for the layout.</p>
+    <p class="center"><img src="https://github.com/chukkaurmila713-tech/Portfolio/actions/workflows/docker-ci.yml/badge.svg" alt="Build status" /></p>
+    <div class="stats">
+      <div class="stat"><span>CPU usage</span><b>23%</b></div>
+      <div class="stat"><span>Memory</span><b>41%</b></div>
+      <div class="stat"><span>Containers</span><b>2 up</b></div>
+      <div class="stat"><span>Uptime</span><b>99.9%</b></div>
+    </div>
+    <div class="panels">
+      <div class="panel">
+        <h3>CPU over the last hour</h3>
+        <svg viewBox="0 0 320 100" role="img" aria-label="CPU usage line chart">
+          <line x1="0" y1="25" x2="320" y2="25" class="grid"/>
+          <line x1="0" y1="50" x2="320" y2="50" class="grid"/>
+          <line x1="0" y1="75" x2="320" y2="75" class="grid"/>
+          <polyline class="line" points="0,78 20,74 40,80 60,70 80,72 100,60 120,66 140,48 160,40 180,58 200,64 220,52 240,60 260,68 280,62 300,66 320,64"/>
+        </svg>
+      </div>
+      <div class="panel">
+        <h3>Memory by container</h3>
+        <div class="bars">
+          <span>app</span><i><u style="width:30%"></u></i><em>120 MB</em>
+          <span>nginx</span><i><u style="width:4%"></u></i><em>8 MB</em>
+        </div>
+      </div>
+    </div>
+    <p class="center"><a class="btn btn-dark" href="https://github.com/chukkaurmila713-tech/Portfolio/actions" target="_blank" rel="noopener">View live pipeline status</a></p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="cards">
+
+      <article class="card">
+        <h3><i class="fa-solid fa-globe"></i> Static site on S3 + CloudFront</h3>
+        <p>We hosted this portfolio in an S3 bucket and served it over HTTPS through CloudFront.</p>
+        <p class="tech">AWS S3, CloudFront, bucket policy</p>
+      </article>
+
+      <article class="card">
+        <h3><i class="fa-brands fa-docker"></i> Docker + CI pipeline</h3>
+        <p>We packaged the site in an Nginx container. GitHub Actions builds the image and pushes it to Docker Hub on every commit.</p>
+        <p class="tech">Docker, Nginx, GitHub Actions, Docker Hub</p>
+      </article>
+
+      <article class="card">
+        <h3><i class="fa-solid fa-rocket"></i> Automated deployment on EC2</h3>
+        <p>Our pipeline connects to an EC2 server over SSH and runs the new container. Nginx works as a reverse proxy on port 80.</p>
+        <p class="tech">AWS EC2, SSH, Nginx reverse proxy</p>
+      </article>
+
+      <article class="card">
+        <h3><i class="fa-solid fa-chart-line"></i> Pipeline and server monitoring</h3>
+        <p>Every push triggers a GitHub Actions build, with the status shown on this site. Our EC2 server is monitored with AWS CloudWatch (CPU, network and status checks). Grafana and Prometheus are planned as a future improvement.</p>
+        <p class="tech">GitHub Actions, AWS CloudWatch, Docker</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <p>Contact us: <a href="mailto:chukkaurmila713@gmail.com">chukkaurmila713@gmail.com</a></p>
+    <p class="social">
+      <a href="https://github.com/chukkaurmila713-tech" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/chukka-urmila" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+    </p>
+    <p class="copy">&copy; 2026 Chukka Urmila, Ganagalla Deekshitha &amp; Lopinti Hephzibah Sharon Lilli</p>
+  </footer>
+
+</body>
+</html>
