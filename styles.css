@@ -125,3 +125,17 @@ footer a { color: #7fe0d4; }
 .bars i { display: block; height: 8px; border-radius: 4px; background: #e6ecf0; }
 .bars u { display: block; height: 8px; border-radius: 4px; background: var(--accent); }
 .bars em { color: var(--muted); font-style: normal; text-align: right; }
+.member .social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+.member .social a {
+  color: #0f766e;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.member .social a:hover {
+  opacity: 0.7;
+}
